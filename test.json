@@ -1,7 +1,19 @@
 {
-  "if": {
+  "$number": "(^\\d+\\.\\d*)|(^\\d*\\.\\d+)",
+  "$identifier": "^[_a-zA-Z][_a-zA-Z\\d]*",
+  "$short_string": "",
+  "$bool": "^(true|false)",
+  "$kwd_if": "^if",
+  "$kwd_then": "^then",
+  "$kwd_elseif": "^elseif",
+  "$kwd_end": "^end",
+  "$sep_lparen": "^\\(",
+  "$sep_rparen": "^\\)",
+  "$op_gt": "^>",
+  "$op_lt": "^<",
+  "@kwd_if": {
     "$exp": {
-      "then": {
+      "@kwd_then": {
         "$block": "end"
       }
     }

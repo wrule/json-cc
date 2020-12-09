@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"regexp"
 )
 
 func main() {
@@ -14,4 +15,8 @@ func main() {
 	m := make(map[string]interface{})
 	json.Unmarshal(bytes, &m)
 	fmt.Println(m)
+
+	// re := regexp.MustCompile(`(^\d+\.\d*)|(^\d*\.\d+)`)
+	rei := regexp.MustCompile(`^[_a-zA-Z][_a-zA-Z\d]*`)
+	fmt.Println(rei.MatchString("_s"))
 }
