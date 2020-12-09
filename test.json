@@ -11,10 +11,38 @@
   "$sep_rparen": "^\\)",
   "$op_gt": "^>",
   "$op_lt": "^<",
-  "@kwd_if": {
-    "$exp": {
-      "@kwd_then": {
-        "$block": "end"
+  "$exp": "表达式",
+  "$block": "块",
+  "$stmt_if": {
+    "$kwd_if": {
+      "$exp": {
+        "$kwd_then": {
+          "$block": {
+            "$kwd_else": {
+              "$block": {
+                "$kwd_end": "end"
+              }
+            },
+            "$kwd_elseif": "-3",
+            "$kwd_end": "end"
+          }
+        }
+      }
+    }
+  },
+  "$stmt_function": {
+    "$kwd_function": {
+      "$identifier": {
+        "$sep_lparen": {
+          "$identifier": {
+
+          },
+          "$sep_rparen": {
+            "$block": {
+              "$end": "end"
+            }
+          }
+        }
       }
     }
   }
